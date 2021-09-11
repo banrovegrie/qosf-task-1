@@ -1,2 +1,3 @@
-# qosf-mentorship
-Solutions to QOSF Mentorship Screening Tasks (Cohort 4)
+### About
+
+This repo contains solutions to QOSF Mentorship Screening Tasks (Cohort 4).
