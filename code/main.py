@@ -20,6 +20,8 @@ def check(num, l):
 
 # Binary length of an integer
 def bin_len(num):
+    if num == 0:
+        return 1
     return int(math.ceil(math.log2(num)))
 
 # Maximum binary length of a list of integers
@@ -139,6 +141,15 @@ def oracle(n, arr):
     return circ
 
 if __name__ == "__main__":
+    """
+    The program deals with designing a general circuit 
+    that accepts vectors with random values of size n 
+    with m bits in length for each element and finds the 
+    state(s) such that it is the superposition of indices 
+    where vector elements at those indices have a binary 
+    representation with every two adjacent bits having 
+    different values.
+    """
     # Taking the vector of integers as input
     arr = []
     n = int(input("Enter number of elements : "))
@@ -157,5 +168,5 @@ if __name__ == "__main__":
     simulator = cirq.Simulator()
     val = simulator.simulate(circ)
     state = val.final_state_vector
-    print("\nSuperposition required: ")
+    print("\nQuantum state required: ")
     print(state.tolist())
